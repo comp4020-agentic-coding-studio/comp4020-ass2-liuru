@@ -1,0 +1,77 @@
+---
+title: "What a model sees"
+description: Week 9 --- guest lecture, Wren Okafor. Two real stroke-level classifiers, what they're actually good at, and what they can't tell you.
+---
+
+{/* _class: impact */}
+
+# What a model sees
+
+Week 9 --- guest lecture, Wren Okafor
+
+---
+
+## Two systems that already exist
+
+- Elgammal, Kang & Den Leeuw (2017/2018) --- stroke-level classifier trained
+  on 300 digitised drawings, mostly Picasso, Matisse and Schiele
+- Sun et al. (2015) --- a stroke-based CNN trained on 180 Chinese ink-wash
+  paintings by six named painters
+
+Neither is a toy. Both are published, peer-reviewed, and built to do exactly
+the job this course keeps asking a human eye to do.
+
+---
+
+{/* _class: centered */}
+
+## The numbers are good
+
+- stroke-level accuracy: 70--90% per system
+- whole-drawing accuracy: above 80%
+- Sun et al.'s ink-wash system: 95% precision, 93% recall
+- Elgammal's system, tested against forgeries commissioned specifically to
+  fool it: caught nearly all of them
+
+---
+
+## That precision is exactly the trap
+
+A model like this only ever tells you what it was trained to recognise.
+
+- Elgammal's training set: under twenty named early-20th-century
+  draughtsmen, mostly Picasso, Matisse and Schiele
+- Sun et al.'s: six named Chinese ink-wash painters, 180 paintings total
+
+Neither set contains Tang Yin, or anything like the Suzhou pian economy this
+course spends a semester on.
+
+---
+
+{/* _class: quote */}
+
+> A model that agrees with the connoisseurs is not yet interesting, and one
+> that disagrees is not yet trustworthy.
+>
+> --- Wren Okafor
+
+---
+
+## What it inherits
+
+Train a classifier on a "securely attributed" set and it inherits every
+misattribution already sitting inside that set --- with total confidence,
+and no way to say which of its answers rests on a shaky one.
+
+It also can't explain itself in terms a seal reading or a colophon can be
+weighed against.
+
+---
+
+{/* _class: banner */}
+
+## Seminar 9: model audit
+
+Wren runs the classifier live against this semester's own shortlisted
+paintings. Working in pairs, try to build an input that makes it confidently
+wrong.
