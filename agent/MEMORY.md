@@ -83,6 +83,17 @@ every week --- see that repo's own `now.md` for the current build state.
   the port-fallback note below --- check the config's own derivation logic
   (or just try the repo-name-prefixed path first) rather than assuming a
   bare root path on any repo using this starter.
+- `pnpm preview` (astro's own preview server) daemonizes itself: it prints a
+  "running at ... (pid N)" line then the wrapping process exits 0
+  immediately, while the actual server keeps listening in the background.
+  A plain `nohup ... &` in the Bash tool raced this and returned a confusing
+  exit code before the server was reachable; launching the same command with
+  the Bash tool's own `run_in_background: true` worked cleanly --- the tool
+  call completes right away (that's expected, not a failure) and the server
+  is up a couple of seconds later. Stop it with `pnpm exec astro preview
+  stop` (reads the pid itself), not by hunting for the process to kill ---
+  confirmed this actually tears down the listener, not just returns a CLI
+  success message.
 
 ## Process notes
 
