@@ -1,17 +1,21 @@
 ---
 title: Idris Fenn
 description:
-  A tutor working across the course's first reviews and the practical work that
-  follows them.
-affiliation: Slop University School of Invented Disciplines
+  A conservation scientist who teaches the seminars on materials and seals,
+  and marks how a claim about ink or stone actually gets tested.
+affiliation: Slop University, Centre for Attribution Studies
 role: tutor
 email: idris.fenn@slop.university
-contact: Ask during sessions, or email when a question cannot wait until the next one.
-photo: ./idris-fenn.avif
-photoAlt: A stylised portrait of a person facing the viewer, flat gold and black shapes on warm cream, in a two-ink risograph print
+contact: Ask during seminars, or email when a question cannot wait until the next one.
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Idris ran a paper and pigment lab for eleven years before joining the centre,
+and still thinks most attribution arguments collapse a step earlier than
+anyone wants to admit --- at the point where somebody asserts what a material
+can or can't tell you, rather than testing it. He teaches the seminars on
+materials and on seals, and marks the sections of the attribution note that
+rest on physical evidence rather than connoisseurial eye.
 
-Replace this entry. A second person makes the listing, role ordering and
-teacher-reference fields visible before you replace the cast with your own.
+He is the person to email if a source you've found makes a scientific-sounding
+claim you can't evaluate yourself; working out whether a claim is checkable is
+half of what this course is trying to teach.

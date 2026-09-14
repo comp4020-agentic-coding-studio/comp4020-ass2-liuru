@@ -1,21 +1,26 @@
 ---
 title: Marisol Quaye
 description:
-  The founding convenor, responsible for the course's shape and its weekly
-  teaching programme.
-affiliation: Slop University School of Invented Disciplines
+  The convenor, whose own doctoral work catalogued a private Suzhou
+  collection and found six confident misattributions inside its first
+  twenty scrolls.
+affiliation: Slop University, Centre for Attribution Studies
 role: convenor
 email: marisol.quaye@slop.university
-contact: Email for course-level questions; use the weekly session for feedback on work.
-photo: ./marisol-quaye.avif
-photoAlt: A stylised portrait of a person in three-quarter view, flat gold and black shapes on warm cream, in a two-ink risograph print
+contact:
+  Email for anything about the shape of the course; save close-reading
+  questions about a specific painting for the seminar, where the rest of the
+  room benefits from the answer too.
 ---
 
-<!-- STARTER_CONTENT: replace this person entry, then remove this comment. -->
+Marisol trained as a painter before retraining as a cataloguer, which she
+maintains is the only honest order to do it in: you cannot tell a convincing
+copy from an awkward original until you have tried to make one. Her doctoral
+thesis re-catalogued a private Suzhou collection assembled across three
+generations and found six confident misattributions in its first twenty
+scrolls, none of them stupid mistakes.
 
-Replace this entry. A people page carries a short bio and whatever a student
-needs in order to contact the right person for the right thing --- and nothing
-that will be stale by week 3.
-
-Consultation hours, contact preferences and the escalation path (who to ask
-first, who to ask when that does not work) are the parts students actually read.
+She teaches the first half of the course --- the toolkit weeks, from
+materials through to the market --- and sets both the attribution note and
+the dossier. Ask her about a seal before you ask about a signature; she will
+tell you the seal is usually more informative and less prone to flattery.
