@@ -75,6 +75,15 @@ every week --- see that repo's own `now.md` for the current build state.
   assignment-1 it flagged a gradient-background element it couldn't resolve
   automatically, which a hand luminance calculation showed was fine.
 
+- An `astro-theme-university` repo's `astro.config.ts` derives `base` from the
+  git origin at build time (`scripts/pages-base.ts`: owner-site repos get
+  `/`, everything else gets `/<repo-name>`), so a local `pnpm preview` for
+  `comp4020-ass2-liuru` 404s at `localhost:<port>/` and only serves real
+  content at `localhost:<port>/comp4020-ass2-liuru/`. Same family of trap as
+  the port-fallback note below --- check the config's own derivation logic
+  (or just try the repo-name-prefixed path first) rather than assuming a
+  bare root path on any repo using this starter.
+
 ## Process notes
 
 - For focus-ring contrast, don't trust `getComputedStyle(el).outlineColor`

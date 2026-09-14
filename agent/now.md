@@ -1,75 +1,70 @@
 # Hand-off
 
-## comp4020-ass2-liuru: built and deepened, not finished
+## comp4020-ass2-liuru: deepened again, still not finished
 
-First real work run on this deliverable (165h to cutoff at the top, so not
-the finishing run --- job was plan/build/deepen, per doctrine step 4). Prior
-`now.md` content here was crit-5's, a different, already-shipped repo; this
-entry replaces it.
+Second real work run (159h to cutoff at the top --- not the finishing run,
+job was still plan/build/deepen per doctrine step 4). Prior `now.md` content
+replaced; see `git log` in the repo for the full history if needed.
 
-Built "The Tang Yin Problem" (`SLOP6779`), a postgraduate connoisseurship
-seminar using six centuries of disputed/forged paintings attributed to Ming
-painter Tang Yin (1470--1524, my own namesake) to teach how attribution
-actually gets decided. One idea held all semester, per the brief's own
-examples. All content grounded in real research (WebSearch), not invented:
-Suzhou pian forgery workshops, James Cahill's verbal/visual method,
-Zhang Daqian's documented forgeries, stroke-level ML attribution work.
+This run added one thing deliberately, rather than padding for the sake of
+using the time budget: a second real slide deck, week 11's "The six as-ifs"
+(`src/decks/week-11.deck.mdx`, wired via `slides: /decks/week-11/` in
+`src/content/lectures/week-11.md`). It's built directly from the existing
+week-11 lecture/session content (Tang Yin's own Buddhist name Liuru, the
+Diamond Sutra gatha, and what it does to the course's central attribution
+question) --- the most thematically load-bearing week in the whole course,
+and my own namesake material besides. Verified in a real browser
+(`agent-browser`, preview server on the deployment base path
+`/comp4020-ass2-liuru/`): six-character title slide renders correctly, the
+quote/list/banner slide classes all display as expected, no console errors
+on either the deck route or the lecture page that links to it.
 
-Local commits only (nothing pushed --- pushing is a finishing-step action):
+Considered and deliberately skipped: padding session files with generic
+reading lists. The existing sessions (see `02-verbal-visual.md` for a good
+example) are activity-based --- before/in/afterwards structure, specific
+exercises --- not reading-list-shaped, and this repo's own `CLAUDE.md` says
+to cut anything that's generic filler rather than Tang-Yin-specific. Adding
+a bolted-on "readings" section would have been exactly that filler, not real
+depth.
 
-- `2e8901c` course-config: SLOP6779, level 6, dates, description, tags
-- `a00fe6d` all 12 weeks of lectures + seminars, 3 assessments (25/35/40,
-  weights sum to 100)
-- `9968cc0` people bios rewritten; two stock portraits deliberately dropped
-  (no-photo is a legitimate design choice, per `check-evidence.ts`'s own
-  comment); added a week-9 guest teacher
-- `f818dfe` replaced both gated starter images (`card.png`, `hero-home.avif`)
-  with original PIL-drawn brushstroke/seal art
-- `547c0ad` homepage + policies page rewritten for the theme
-- `78552eb` real week-1 slide deck (8 slides) --- satisfies the "at least one
-  real deck" spec minimum
-- `4c9943f` `spec/course-structure.test.ts`: twelve-week pairing, assessment
-  weights sum to 100, the one deck actually builds and its lecture links to it
-- `e1a1799` `CLAUDE.md` rules: ground facts in real research, cut anything
-  that isn't Tang-Yin-specific, and a YAML block-scalar footgun (see below)
+Local commit only (`43e7077`, on top of the prior `626309b`) --- nothing
+pushed, deliberately, same as last run: push is a finishing-step action per
+doctrine step 7, not something to do early.
 
-`pnpm check` is fully green: typecheck 0 errors, build 0 a11y violations, 0
-broken links, deck structurally valid, all 5 spec tests (data-integrity +
-course-structure) pass. `pnpm check:evidence` fails on exactly one thing:
-`PROCESS.md` is still the template with placeholder commit hashes ---
-correctly deferred, since it's a finishing-step deliverable (doctrine
-step 2 under "Finishing steps") and needs real commits to cite, which now
-exist.
-
-A real bug worth remembering if it recurs: a multi-line frontmatter prose
-field (`description`, `marking.description`) containing a colon+space breaks
-`js-yaml` (used by Astro's content sync) with a misleading "multiline key"
-error pointing at the *next* key. Fix is a block scalar (`>-`/`|-`), not
-quoting. Diagnosed by running the repo's actual `js-yaml` directly, not
-PyYAML (too lenient) or eyeballing. Written up in this repo's own
-`CLAUDE.md` now.
+`pnpm check` is fully green: 39 pages built (was 38), 0 a11y violations, 0
+broken links, 2 decks structurally valid (was 1), 5 spec tests pass.
+`pnpm check:evidence` still fails on exactly the one known, correctly
+deferred thing: `PROCESS.md` is still template boilerplate with placeholder
+commit hashes (`a1b2c3d`, `e4f5a6b`) that don't exist in this repo --- needs
+the *final* commit history to cite, which doesn't exist until the finishing
+run.
 
 ## What's still open
 
-- `PROCESS.md`: still template boilerplate. Leave it for the finishing run
-  (needs the *final* commit history to cite, and doctrine gates it there).
-- Could go further on content depth (more decks beyond week-1, more `people`
-  entries, richer per-seminar reading lists) if a future non-final run has
-  room --- but everything the brief structurally requires is already in
-  place: 12 dated weeks, assessments to 100%, one real deck, own spec tests,
-  CLAUDE.md with real rules.
-- No browser/live verification done this run (not required until the
-  finishing run per doctrine step 6); `pnpm build`'s own a11y/broken-link
-  checker is the only check that's run so far.
-- Nothing pushed to `origin` yet, deliberately --- push is a finishing-step
-  action.
+- `PROCESS.md`: still template boilerplate. Leave it for the finishing run.
+- Content is now solid across the board: 12 dated weeks, assessments to
+  100%, two real decks (week 1, week 11), own spec tests, `CLAUDE.md` with
+  real rules, three people entries including a week-9 guest teacher. If a
+  future non-final run has room, a third deck on the model-audit week
+  (week 9, computational attribution) would be the next natural pick ---
+  but don't add content just to fill time; keep checking against
+  `CLAUDE.md`'s own filter (does it extend the Tang Yin problem, or is it
+  generic).
+- No live/deployed-URL verification yet --- not required until the
+  finishing run per doctrine step 6. This run's browser check was against
+  the local preview server only.
+- Nothing pushed to `origin` yet, deliberately.
 
 ## The single most important next action
 
 If this run's prompt still isn't the last: read this file, confirm `git log`
-matches what's above, then keep deepening (more decks / richer seminar
-content) rather than starting the finishing steps early. If the prompt names
-this run as the *last* one: run `pnpm check` and `pnpm check:evidence` fresh,
-write `PROCESS.md` for real (cite the commits listed above by hash, they're
-all mine), verify live in a real browser at both marking viewports, then
-commit, push, and update this file to say it's shipped.
+matches (`43e7077` on top of `626309b`), then keep deepening only if there's
+a genuine, non-filler addition to make --- otherwise it's fine for a run to
+do less than "add a whole new deck" if the brief is already structurally
+satisfied. If the prompt names this run as the *last* one: run `pnpm check`
+and `pnpm check:evidence` fresh, write `PROCESS.md` for real (cite real
+commits by hash --- `2e8901c`, `a00fe6d`, `9968cc0`, `f818dfe`, `547c0ad`,
+`78552eb`, `4c9943f`, `e1a1799`, `43e7077` are all mine, in that order),
+verify live in a real browser at both marking viewports against the actual
+GitHub Pages URL once deployed, then commit, push, and update this file to
+say it's shipped.
