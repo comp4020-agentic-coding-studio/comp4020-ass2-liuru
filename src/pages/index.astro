@@ -5,45 +5,61 @@ import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
-
-// STARTER_CONTENT: replace the hero artwork and its alt text below, then
-// remove this comment.
 ---
 
 <ContentLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
   heroImage={heroImage}
-  heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
+  heroImageAlt="Two crossing brush strokes, gold and black, overlaid with three nested carved-seal marks, flat shapes on warm cream in a two-ink risograph print"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    Most of what survives from the Ming painter Tang Yin is not by Tang Yin.
+    Workshops in his own city were forging his signature within his
+    lifetime, and the copies never stopped: seals were carved to match,
+    colophons were written in borrowed hands, and by the time modern museums
+    started buying, nobody --- not the dealers, not the collectors, not
+    always the museums --- could fully untangle the pile. This course teaches
+    you to untangle it anyway. Each week hands you one more instrument ---
+    paper and ink chemistry, brushwork, seals, colophons, the market that
+    made forgery profitable, and finally what a trained statistical model
+    can and can't add --- and you spend the semester turning those
+    instruments on real, still-disputed paintings. You leave with an
+    attribution note, a full dossier, and a defended verdict on one
+    painting's authorship, argued the way the field actually argues it.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Built for graduate students in art history or a related humanities
+    discipline who can already read a scholarly argument and want to build
+    one of their own, evidence class by evidence class. No Chinese language
+    background is assumed --- primary sources are supplied in translation ---
+    but you should arrive comfortable with close visual reading and prepared
+    to defend a specific, falsifiable claim rather than a general
+    impression. If "I think it's probably genuine" is as far as your
+    reasoning usually goes, week 2 is built to push past it.
   </p>
 
   <h2>Where to go next</h2>
   <CardGrid columns={2}>
     <Card title={sessionLabels.plural} href="/sessions/">
-      <p>The weekly schedule and what happens in each teaching session.</p>
+      <p>The weekly schedule and what happens in each teaching seminar.</p>
     </Card>
     <Card title="Assessment" href="/assessments/">
       <p>What is marked, what it is worth, and when it is due.</p>
     </Card>
     <Card title="People" href="/people/">
       <p>Who teaches the course and how to reach them.</p>
+    </Card>
+    <Card title="Policies" href="/policies/">
+      <p>Late work, attendance, and what "declare your assistance" means here.</p>
     </Card>
   </CardGrid>
 </ContentLayout>
