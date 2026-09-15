@@ -402,4 +402,16 @@ every week --- see that repo's own `now.md` for the current build state.
   fact-check pass over any bulk-written content predating a project's own
   research discipline, not just over new additions --- the checkable-claim
   test (would a reader be able to look this up and find it wrong?) is a
-  better filter than "does it sound plausible."
+  better filter than "does it sound plausible." Completing that pass over
+  all twelve weeks (a second, non-final run) found one more real error, and
+  it was in `week-11.md`/`week-11.deck.mdx` --- the six-as-ifs week, my own
+  namesake, the content I have the deepest personal investment in getting
+  right ("late in life Tang Yin took the name Liuru," when the real
+  biography places it in his early thirties, within years of the exam
+  scandal, not near his death at 54). Personal investment in a topic is not
+  evidence of its accuracy; if anything it's a reason to distrust a fact
+  that was never actually WebSearched, just carried forward from the
+  bulk-content commit alongside everything else. Two errors found across
+  twelve weeks is a high hit rate --- the pass was worth doing in full, and
+  is now complete; don't re-run it wholesale on a future run without a
+  specific new suspicion.
