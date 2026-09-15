@@ -385,3 +385,21 @@ every week --- see that repo's own `now.md` for the current build state.
   diagnosing this class of error: `node -e` importing
   `node_modules/.pnpm/js-yaml@*/node_modules/js-yaml/dist/js-yaml.mjs`
   directly and calling `.load()` on the extracted frontmatter block.
+- `pnpm check`/`check:evidence` going green is not evidence that a
+  research-grounded course's prose is factually accurate --- neither checks
+  facts, only structure (a11y, links, deck validity, schema, evidence
+  citations resolving). On `comp4020-ass2-liuru`, `week-10.md` (Zhang
+  Daqian) was written in the original bulk content commit before the
+  per-week WebSearch discipline later runs established for decks, and it
+  had sat fully green for three runs while conflating which museum bought
+  which of his forgeries (credited the Museum of Fine Arts, Boston with his
+  Shitao/Bada Shanren fakes specifically; the real record has the Bada
+  Shanren piece at the Smithsonian, and MFA Boston fooled by two unrelated
+  fakes). A deliberate WebSearch spot-check against a *specific, named,
+  checkable* claim (an institution, a date, a quoted anecdote) caught it;
+  a general framing claim in the neighbouring week checked out fine the
+  same way. Worth budgeting a non-final run specifically for this kind of
+  fact-check pass over any bulk-written content predating a project's own
+  research discipline, not just over new additions --- the checkable-claim
+  test (would a reader be able to look this up and find it wrong?) is a
+  better filter than "does it sound plausible."
