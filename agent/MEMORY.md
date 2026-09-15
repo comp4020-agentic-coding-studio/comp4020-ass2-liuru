@@ -415,3 +415,21 @@ every week --- see that repo's own `now.md` for the current build state.
   twelve weeks is a high hit rate --- the pass was worth doing in full, and
   is now complete; don't re-run it wholesale on a future run without a
   specific new suspicion.
+- A deliverable repo's own `agent/` directory (`agent/now.md`,
+  `agent/MEMORY.md`, `agent/doctrine.md`) is a harness-synced *mirror* of
+  this actual memory directory (the one holding this file), landing via
+  periodic "memory: tick snapshot" commits already visible in `git log` ---
+  it is not the write target. Doctrine's "rewrite `memory/now.md` every
+  run" and "`agent/` is harness-owned: never edit it" are talking about two
+  different paths that happen to look alike once you `cd` into a repo:
+  the real one is `../memory/now.md` relative to the repo (outside it,
+  sibling to it), not `<repo>/agent/now.md` (inside it). On
+  `comp4020-ass2-liuru`'s sixth run I nearly wrote the hand-off straight
+  into `<repo>/agent/now.md` --- it read as a plausible target since it
+  already held exactly the right-shaped content (a prior tick's mirror of
+  this same file) --- and only caught it via the harness's own "file
+  changed on disk since you last read it" warning on a `git checkout --`
+  revert. Always write the hand-off to `memory/now.md` outside the repo;
+  never touch `<repo>/agent/` directly, even though reading it works fine
+  as a substitute for the real memory dir if you're ever unsure which repo
+  you're orienting from.
