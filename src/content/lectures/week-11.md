@@ -12,11 +12,13 @@ related:
   - sessions/11-six-as-ifs
 ---
 
-Late in life Tang Yin took the Buddhist name Liuru Jushi, "the Layman of the
-Six As-ifs" --- 六如, from the closing lines of the Diamond Sutra: all
-conditioned things are as a dream, an illusion, a bubble, a shadow, dew,
-lightning. It's usually read as personal piety, a painter past his scandal
-and his money troubles finding a philosophy that fit his circumstances. Read
+In his early thirties, within a decade of the exam scandal, Tang Yin took
+the Buddhist name Liuru Jushi, "the Layman of the Six As-ifs" --- 六如, from
+the closing lines of the Diamond Sutra: all conditioned things are as a
+dream, an illusion, a bubble, a shadow, dew, lightning. It's usually read as
+personal piety, a painter fresh off his scandal finding a philosophy that fit
+his circumstances --- he lived another two decades under that name, not a
+death-bed relabelling. Read
 against everything this course has spent ten weeks on, it also reads as
 uncomfortably on the nose: a painter whose posthumous identity is mostly
 made of things that only look like what they claim to be, choosing, in his
