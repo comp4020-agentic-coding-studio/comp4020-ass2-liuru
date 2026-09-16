@@ -10,6 +10,7 @@ teachers:
 slides: /decks/week-09/
 related:
   - sessions/09-model-audit
+  - people/wren-okafor
 ---
 
 Guest week, taught by Wren Okafor. Stroke-level attribution models --- the

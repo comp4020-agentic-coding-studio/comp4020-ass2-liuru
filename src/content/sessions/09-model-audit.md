@@ -14,6 +14,7 @@ spec:
     wrong
 related:
   - lectures/week-09
+  - people/wren-okafor
 ---
 
 ## Before the seminar

@@ -14,6 +14,7 @@ spec:
     doesn't fully support
 related:
   - lectures/week-03
+  - people/idris-fenn
 ---
 
 ## Before the seminar

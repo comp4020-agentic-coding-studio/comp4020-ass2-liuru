@@ -15,6 +15,7 @@ spec:
 related:
   - lectures/week-05
   - assessments/attribution-note
+  - people/idris-fenn
 ---
 
 ## Before the seminar
