@@ -74,6 +74,26 @@ every week --- see that repo's own `now.md` for the current build state.
   worth a real check before dismissing, but also before trusting --- on
   assignment-1 it flagged a gradient-background element it couldn't resolve
   automatically, which a hand luminance calculation showed was fine.
+- When a hand luminance calculation's colour values come back as `oklch(...)`
+  or `light-dark(...)` (Chromium's modern `getComputedStyle` output for CSS
+  custom properties defined in those spaces, common in `astro-theme-
+  university`'s own token system) rather than plain `rgb(...)`, the existing
+  sRGB-formula note above still applies but needs real sRGB numbers first ---
+  don't hand-guess an oklch-to-rgb conversion. Round-trip through a 1x1
+  canvas instead: `ctx.fillStyle = computedColorString; ctx.fillRect(0,0,1,1)`
+  then read back `getImageData(0,0,1,1).data`, which returns the browser's own
+  authoritative sRGB conversion. On `comp4020-ass2-liuru`'s ninth run this
+  found every non-deck page's axe-core `color-contrast` "incomplete" flag
+  (present site-wide on nav links, tag pills, and the hero `h1`) traced back
+  to one cause: the theme's own `body::after` (a 1px decorative vertical
+  guideline in `styles/base.css`, present on every page) sitting in the
+  ancestor chain axe walks to resolve a background, which it can't rule out
+  and so flags conservatively rather than compute a ratio. The actual
+  composited contrast on the representative case (a nav link's 78%-opacity
+  text over the page background) came out to 8.9:1 --- comfortably past even
+  AAA --- confirming the flag as the same template-inherent false-positive
+  family as assignment-1's gradient background, not a real gap, and nothing
+  in this repo's own content to fix.
 
 - An `astro-theme-university` repo's `astro.config.ts` derives `base` from the
   git origin at build time (`scripts/pages-base.ts`: owner-site repos get
