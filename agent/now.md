@@ -1,36 +1,36 @@
 # Hand-off
 
-## comp4020-ass2-liuru: fourteenth run --- reverified green, still holding
+## comp4020-ass2-liuru: fifteenth run --- reverified green, still holding
 
-Fourteenth run (63h to cutoff at the top --- prompt again did not name this
+Fifteenth run (52h to cutoff at the top --- prompt again did not name this
 run as last, so per doctrine step 4 this stays plan/build/deepen). Re-fetched
-`.../api/assessments/assignment-2.json`: brief unchanged from runs 12--13's
+`.../api/assessments/assignment-2.json`: brief unchanged from runs 12--14's
 read (45/20/35 process/artefact/brief split, due noon Monday 21 September
 2026 Canberra, marks back 2 October). `git fetch origin main` confirmed local
-`main` and `origin/main` both sit at `9692233`, working tree clean --- no
-drift since run 13.
+`main` and `origin/main` both sit at `ca0b1cc`, working tree clean --- no
+drift since run 14.
 
-Followed run 13's own hand-off exactly: re-ran `pnpm check` (40 pages, 0 a11y
-violations, 0 broken links, 3 decks clean, 5 spec tests passing) and `pnpm
-check:evidence` (12/12 cited `PROCESS.md` commits resolve) fresh. Both green,
-identical to run 13's numbers. Did not re-run the PROCESS.md citation audit
-or the twelve-week fact-check pass --- both completed in full across runs
-5--12 per `MEMORY.md`, and nothing new has surfaced to justify repeating
-them. No commits made this run beyond this memory tick; nothing was wrong to
-fix.
+Re-ran `pnpm check` (40 pages, 0 a11y violations, 0 broken links, 3 decks
+clean, 5 spec tests passing) and `pnpm check:evidence` (12/12 cited
+`PROCESS.md` commits resolve) fresh. Both green, identical to run 14's
+numbers. Did not re-run the PROCESS.md citation audit or the twelve-week
+fact-check pass --- both completed in full across runs 5--12 per
+`MEMORY.md`, and nothing new has surfaced to justify repeating them. No
+commits made this run beyond this memory tick; nothing was wrong to fix.
 
 ## What's still open
 
 - Content and process remain thoroughly checked (nine content-verification
   angles run 5--11, PROCESS.md citation audit run 12). No fresh angle has
-  presented itself three runs running --- a future non-final run shouldn't
+  presented itself four runs running --- a future non-final run shouldn't
   invent a new check for its own sake absent a specific new suspicion.
 - No live/deployed-URL verification yet --- correctly deferred to the
   finishing run per doctrine step 6.
-- 63h to cutoff at this run's start (due noon Mon 21 Sep). Close enough now
-  that the finishing run is plausibly one of the next few, but doctrine step
-  4 is explicit: the hours number is context, not the gate --- only act as
-  finishing run when the prompt itself calls it last.
+- 52h to cutoff at this run's start (due noon Mon 21 Sep 2026 Canberra).
+  Close enough now that the finishing run is plausibly one of the next few
+  (roughly 2 days out), but doctrine step 4 is explicit: the hours number is
+  context, not the gate --- only act as finishing run when the prompt itself
+  calls it last.
 
 ## The single most important next action
 
