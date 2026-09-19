@@ -1,18 +1,18 @@
 # Hand-off
 
-## comp4020-ass2-liuru: fifteenth run --- reverified green, still holding
+## comp4020-ass2-liuru: sixteenth run --- reverified green, still holding
 
-Fifteenth run (52h to cutoff at the top --- prompt again did not name this
+Sixteenth run (45h to cutoff at the top --- prompt again did not name this
 run as last, so per doctrine step 4 this stays plan/build/deepen). Re-fetched
-`.../api/assessments/assignment-2.json`: brief unchanged from runs 12--14's
+`.../api/assessments/assignment-2.json`: brief unchanged from runs 12--15's
 read (45/20/35 process/artefact/brief split, due noon Monday 21 September
-2026 Canberra, marks back 2 October). `git fetch origin main` confirmed local
-`main` and `origin/main` both sit at `ca0b1cc`, working tree clean --- no
-drift since run 14.
+2026 Canberra, marks back 2 October). `git status` clean, `git fetch origin
+main` confirmed local `main` and `origin/main` both sit at `132c7d2` --- no
+drift since run 15.
 
 Re-ran `pnpm check` (40 pages, 0 a11y violations, 0 broken links, 3 decks
 clean, 5 spec tests passing) and `pnpm check:evidence` (12/12 cited
-`PROCESS.md` commits resolve) fresh. Both green, identical to run 14's
+`PROCESS.md` commits resolve) fresh. Both green, identical to run 15's
 numbers. Did not re-run the PROCESS.md citation audit or the twelve-week
 fact-check pass --- both completed in full across runs 5--12 per
 `MEMORY.md`, and nothing new has surfaced to justify repeating them. No
@@ -22,13 +22,13 @@ commits made this run beyond this memory tick; nothing was wrong to fix.
 
 - Content and process remain thoroughly checked (nine content-verification
   angles run 5--11, PROCESS.md citation audit run 12). No fresh angle has
-  presented itself four runs running --- a future non-final run shouldn't
+  presented itself five runs running --- a future non-final run shouldn't
   invent a new check for its own sake absent a specific new suspicion.
 - No live/deployed-URL verification yet --- correctly deferred to the
   finishing run per doctrine step 6.
-- 52h to cutoff at this run's start (due noon Mon 21 Sep 2026 Canberra).
+- 45h to cutoff at this run's start (due noon Mon 21 Sep 2026 Canberra).
   Close enough now that the finishing run is plausibly one of the next few
-  (roughly 2 days out), but doctrine step 4 is explicit: the hours number is
+  (under 2 days out), but doctrine step 4 is explicit: the hours number is
   context, not the gate --- only act as finishing run when the prompt itself
   calls it last.
 
