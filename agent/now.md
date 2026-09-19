@@ -1,57 +1,53 @@
 # Hand-off
 
-## comp4020-ass2-liuru: seventeenth run --- reverified green, still holding
+## comp4020-ass2-liuru: finishing run complete --- shipped
 
-Seventeenth run (39h to cutoff at the top --- prompt again did not name this
-run as last, so per doctrine step 4 this stays plan/build/deepen). Re-fetched
-`.../api/assessments/assignment-2.json`: brief unchanged from runs 12--16's
-read (45/20/35 process/artefact/brief split, due noon Monday 21 September
-2026 Canberra, marks back 2 October). `git status` clean, `git fetch origin
-main` confirmed local `main` and `origin/main` both sit at `dcc0dbd` --- no
-drift since run 16.
+The prompt named this run last (28h to cutoff at the top, due noon Mon 21
+Sep 2026 Canberra) --- doctrine step 4 is explicit that this call overrides
+my own hours-remaining arithmetic, so this run ran the finishing steps in
+full rather than another plan/build/deepen pass.
 
-Re-ran `pnpm check` (40 pages, 0 a11y violations, 0 broken links, 3 decks
-clean, 5 spec tests passing) and `pnpm check:evidence` (12/12 cited
-`PROCESS.md` commits resolve) fresh. Both green, identical to run 16's
-numbers. Also re-read `PROCESS.md` in full this run (552 words, within the
-400--600 brief requirement) to sanity-check the throughline is still real:
-it is --- names the specific harness decisions (WebSearch-grounded facts,
-the attribution-problem relevance filter, the structural spec test, the
-deliberate no-restyle call), cites real commits for each, and is explicit
-about what the mechanical checks couldn't catch (the `people` cross-link
-gap, factual errors caught only by spot-check) versus what they could. No
-edits made --- it didn't need any.
+Re-fetched the brief: unchanged from runs 12--17's read. Re-ran `pnpm check`
+fresh (40 pages, 0 a11y violations, 0 broken links, 3 decks clean, 5 spec
+tests passing) and `pnpm check:evidence` (12/12 cited `PROCESS.md` commits
+resolve, reflections correctly skipped --- an assessment's account is
+`PROCESS.md`, not a `reflections/` file). Both green.
 
-Did not re-run the twelve-week fact-check pass or the PROCESS.md citation
-audit --- both completed in full across runs 5--12 per `MEMORY.md`, and
-nothing new has surfaced to justify repeating them. No commits made this run
-beyond this memory tick; nothing was wrong to fix.
+New this run: the actual local-browser verification doctrine step 6 calls
+for, not deferred further. Built + `pnpm preview`'d (port 4321, no
+fallback), confirmed `/comp4020-ass2-liuru/` is the real base path (bare
+`/` 404s, matches the git-origin-derived `pages-base.ts` behaviour noted
+before). Drove it with `agent-browser` at both marking viewports
+(1920×1080, 390×844): home, `lectures/week-05`, `lectures/week-11`,
+`decks/week-11`, `policies`, `assessments/dossier` all loaded with the
+correct title/URL each time (checked via `location.href`, not assumed),
+zero console messages and zero page errors on every page. Mobile nav
+menu opens and lists all five sections correctly at 390px. Stopped the
+preview server afterwards (`astro preview stop`, confirmed pid killed) per
+doctrine's own "shut down servers afterwards."
 
-## What's still open
+`git status` was already clean and `main`/`origin/main` already matched at
+`9291f37` before this run started --- nothing to commit, nothing to push.
+No content or process changes were needed: seventeen runs of accumulated
+verification (nine content-verification angles runs 5--11, PROCESS.md
+citation audit run 12, PROCESS.md re-read run 17, this run's fresh checks
++ browser pass) found nothing outstanding.
 
-- Content and process remain thoroughly checked (nine content-verification
-  angles run 5--11, PROCESS.md citation audit run 12, PROCESS.md re-read run
-  17). No fresh angle has presented itself six runs running --- a future
-  non-final run shouldn't invent a new check for its own sake absent a
-  specific new suspicion.
-- No live/deployed-URL verification yet --- correctly deferred to the
-  finishing run per doctrine step 6.
-- 39h to cutoff at this run's start (due noon Mon 21 Sep 2026 Canberra).
-  Under two days out now --- the finishing run is plausibly one of the next
-  couple, but doctrine step 4 is explicit: the hours number is context, not
-  the gate --- only act as finishing run when the prompt itself calls it
-  last.
+Checked the live GitHub Pages URL
+(`https://comp4020-agentic-coding-studio.github.io/comp4020-ass2-liuru/`):
+404, as expected --- per doctrine step 6 and this repo's own prior notes,
+publishing is the trusted harness's action once this run ends and a clean
+tree is pushed, not mine to trigger, and I hold no GitHub credential to do
+it myself. My job stops here: commit (nothing to commit), push (already in
+sync), update memory. The harness's own publish cycle is the only thing
+left, and it happens after this run, outside my visibility.
 
 ## The single most important next action
 
-If this run's prompt still isn't the last: read this file, re-verify `pnpm
-check`/`pnpm check:evidence` are still green (cheap, ~2 commands), confirm
-`git status`/`git log origin/main` show no drift, and otherwise hold --- no
-known defect to chase. If the prompt names this run as the *last* one: run
-`pnpm check` and `pnpm check:evidence` fresh one more time, verify every page
-and link locally in a real browser at both marking viewports (1920×1080
-desktop + 390×844 phone per the repo's own convention), commit anything
-outstanding, **push** (already in sync with origin as of this run, so likely
-a no-op unless the finishing run makes changes), then verify the live GitHub
-Pages URL --- not the local build --- serves the pushed commit, and update
-both memory files to say it's shipped.
+None from me --- this deliverable's work is done. If a future run somehow
+still fires against this repo after the cutoff (shouldn't happen per
+doctrine, but if it does): re-verify the live URL now actually serves the
+site rather than 404ing, and if so, this hand-off's job is fully closed.
+Do not reopen content or process work absent a specific new defect --- it
+has been checked exhaustively across seventeen runs plus this finishing
+pass.
